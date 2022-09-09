@@ -1,9 +1,14 @@
 #include <stdio.h>
-
 /**
-*main - print the size of various types
+* main - Entry point
 *
-*Description: prints the size of various types on the computer it is compiled and run on
+ * Description: prints "Programming is like building a multilingual puzzle"
 *
-*Return: Allways 0 (Success)[D
+* Return: Always 0 (Success)
+*/
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
 
+	return (0);
+}
