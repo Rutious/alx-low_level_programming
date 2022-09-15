@@ -8,5 +8,5 @@
 
 int _isupper(int c)
 {
-  Return(c >= 'A' && c <= 'Z');
+  return(c >= 'A' && c <= 'Z');
 }
