@@ -1,18 +1,29 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * malloc_checked - allocates memory.
- * @b: amount of bytes.
+ * array_range - creates an array of integers.
+ * @min: minimum value.
+ * @max: maximum value.
  *
- * Return: pointer to the allocated memory.
- * if malloc fails, status value is equal to 98.
+ * Return: pointer to the newly created array.
+ * if man > mix, returns NULL.
+ * if malloc fails, returns NULL.
  */
-void *malloc_checked(unsigned int b)
+int *array_range(int min, int max)
 {
-	char *p;
+	int *ar;
+	int i;
 
-	p = malloc(b);
-	if (p == NULL)
-		exit(98);
-	return (p);
+	if (min > max)
+		return (NULL);
+
+	ar = malloc(sizeof(*ar) * ((max - min) + 1));
+
+	if (ar == NULL)
+		return (NULL);
+
+	for (i = 0; min <= max; i++, min++)
+		ar[i] = min;
+
+	return (ar);
 }
